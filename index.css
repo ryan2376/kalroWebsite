@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap');
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    font-family:'Work Sans', sans-serif;
+    font-weight: 400;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    --cl--1--:#008000;
+    --cl--2--:#228B22;
+    --cl--3--:#568203;
+    --cl--4--:#00563B;
+    --cl--5--:#17B169;
+    background: var(--cl--1--);
+    margin: 0;
+}
+
+img{
+    max-width: 50%;
+    width: 50%;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-weight: 700;
+    color: var(--cl--2--);
+    text-transform: capitalize;
+    margin: 0;
+}
+
+h1{
+    font-size: clamp(40px, 5vw, 70px);
+}
+
+h2{
+    font-size: clamp(25px, 5vw, 35px);
+}
+
+h3{
+    font-size: 20px;
+}
+
+p{
+    font-size: 16px;
+    color: var(--cl--4--);
+    margin: 0;
+}
+
+a{
+    display: inline-block;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -ms-transition: 0.3s ease-in-out;
+    -o-transition:0.3s ease-in-out;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.row{
+    display: flex;
+}
+
+.flex{
+    flex-wrap: wrap;
+    gap: clamp(2em, 5vw, 5em);
+}
+
+.flex>*{
+    flex: 1 1 25em;
+}
+
+.column{
+    display: grid;
+}
+
+.container{
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+/* navigation */
+header{
+    align-items: center;
+    justify-content: space-between;
+    gap: 2em;
+    padding: 2em 0;
+}
+
+.logo img{
+    max-height: 40px;
+}
+
+nav ul{
+    align-items: center;
+    gap: 2em;
+}
+
+nav a {
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--cl--2--);
+    text-transform: capitalize;
+}
+
+nav a:hover{
+    color: var(--cl--3--);
+}
+
+/* end navigation */
+
+/* media queries */
+@media screen and (min-width:1300px){
+    .container{
+        max-width: 1215px;
+    }
+    
+}
+
+@media screen and (max-width:900px) {
+    .toggleMenu{
+        background-image: url(./images/127-1276664_hamburger-menu-png.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 30px;
+        width: 30px;
+        height: 30px;
+        z-index: 1000;
+        transition: background-size 0.3s ease-in-out;
+        -webkit-transition:background-size 0.3s ease-in-out;
+        -moz-transition:background-size 0.3s ease-in-out;
+        -ms-transition:background-size 0.3s ease-in-out;
+        -o-transition:background-size 0.3s ease-in-out;
+    }
+
+    .toggleMenu.active{
+        position: fixed;
+        right: 5%;
+        background-image: url(./images/Icons8-Ios7-Very-Basic-Cancel.512.png);
+    }
+
+    .navigation{
+        p
+    }
+}
+
